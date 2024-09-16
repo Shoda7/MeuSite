@@ -86,15 +86,15 @@ h2 {
 }
 
 .icon {
-    width: 20px; /* Ajusta o tamanho da imagem */
+    width: 20px;
     height: 20px;
-    margin-right: 10px; /* Espaço entre a imagem e o texto */
+    margin-right: 10px;
 }
 
 ul {
     padding: 0;
-    list-style-type: disc; /* Bolinha padrão */
-    padding-left: 20px; /* Adiciona espaço antes das bolinhas */
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 ul li {
