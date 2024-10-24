@@ -17,6 +17,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 70px;
 }
 
 .profile-img {
@@ -41,29 +42,33 @@ nav {
     background-color: #0078D4;
     padding: 15px 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                transition: color 0.3s ease;
+            }
 
-nav ul li a:hover {
-    color: #333;
-}
+                nav ul li a:hover {
+                    color: #333;
+                }
 
 section {
     margin: 40px 20px;
@@ -73,7 +78,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-p{
+p {
     text-align: justify;
 }
 
@@ -97,24 +102,49 @@ ul {
     padding-left: 20px;
 }
 
-ul li {
-    margin: 10px 0;
-    font-size: 1.1em;
-    align-items: center;
-}
+    ul li {
+        margin: 10px 0;
+        font-size: 1.1em;
+        align-items: center;
+    }
 
 footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
     color: white;
-    margin-top: 40px;
+    margin-top: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 1s forwards;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+    .social-icons a img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        transition: transform 0.3s;
+    }
+
+    .social-icons a:hover img {
+        transform: scale(1.1);
+    }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .download-btn {
@@ -128,16 +158,10 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.download-btn:hover {
-    background-color: #45a049;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .download-btn:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
     }
-}
 
 @media (min-width: 768px) {
     section {
