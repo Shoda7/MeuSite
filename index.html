@@ -3,84 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEV - Matheus Shoda Lima</title>
-    <link rel="shortcut icon" type="imagex/png" href="imagens/dev.png">
+    <title>Portfolio - Matheus Shoda Lima</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="imagens/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="profile">
-            <img src="perfil.jpg" alt="Sua Foto" class="profile-img">
-            <div class="profile-info">
-                <h1>Matheus Shoda Lima</h1>
-                <p>Desenvolvedor C# .NET</p>
-            </div>
+        <div class="header-container">
+            <div class="profile">
+                <img src="perfil.jpg" alt="Foto de Perfil" class="profile-img">
+                <div class="profile-info">
+                    <h1>Matheus Shoda Lima</h1>
+                    <p>Desenvolvedor Fullstack</p>
+                </div>
+            </div>  
         </div>
     </header>
-    
+
     <nav>
         <ul>
-            <li><a href="#about">Sobre Mim</a></li>
+            <li><a href="#about">Sobre</a></li>
             <li><a href="#formacao">Formação</a></li>
             <li><a href="#skills">Habilidades</a></li>
             <li><a href="#experience">Experiência</a></li>
+            <!-- <li><a href="#projects">Projetos</a></li> -->
             <li><a href="#contact">Contato</a></li>
         </ul>
     </nav>
 
-    <section id="about" class="fade-in">
-        <h2>Sobre Mim</h2>
-        <p>Sou o Matheus Shoda Lima, tenho 24 anos, técnico em informática formado pelo Colégio Técnico Industrial da UNESP Bauru. Durante minha formação, tive a oportunidade de estagiar em programação com foco em C# na SORRI Bauru, onde pude aplicar meus conhecimentos em desenvolvimento de software e aprender com profissionais experientes.</p>
+    <main>
+        <section id="about" class="content-section">
+            <h2>Sobre Mim</h2>
+            <p>Sou Matheus Shoda Lima, desenvolvedor com experiência em C#, .NET e SQL Server. Minha trajetória inclui projetos acadêmicos e profissionais focados em desenvolvimento backend, automação de processos e integração de sistemas. Atualmente, curso Bacharelado em Sistemas de Informação na UNESP e atuo como Programador Júnior na Concilig.</p>
+        </section>
 
-        <p>Atualmente, estou cursando Bacharelado em Sistemas de Informação na UNESP e atuo como programador júnior na Concilig, onde fui efetivado após estágio. Estou sempre em busca de novas oportunidades para expandir meus conhecimentos e aprimorar minhas habilidades em programação e tecnologia da informação.</p>
-        
-        <p>Tenho experiência em linguagens de programação como C# e PHP e estou sempre disposto a aprender novas ferramentas e tecnologias para me manter atualizado.</p>
-    </section>
+        <section id="formacao" class="content-section">
+            <h2>Formação</h2>
+            <ul>
+                <li><strong>Técnico em Informática</strong> – CTI UNESP (2016 - 2018)</li>
+                <li><strong>Bacharelado em Sistemas de Informação</strong> – UNESP Bauru (2023 - Atualmente)</li>
+            </ul>
+        </section>
 
-    <section id="formacao" class="fade-in">
-        <h2>Formação</h2>
-        <ul>
-            <li>(2016 - 2018) | Curso ténico de informática - CTI - Colégio Técnico Industrial “Prof. Isaac Portal Roldán” - Câmpus de Bauru</li>
-            <li>(2023 - Atualmente) | Bacharelado em Sistemas de informação - UNESP Bauru</li>
-        </ul>
-    </section>
+        <section id="skills" class="content-section">
+            <h2>Habilidades Técnicas</h2>
+            <ul class="skills-list">
+                <li>C# .NET</li>
+                <li>JavaScript</li>
+                <li>SQL Server</li>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>HTML5 e CSS3</li>
+                <li>Automação com Selenium</li>
+            </ul>
+        </section>
 
-    <section id="skills" class="fade-in">
-        <h2>Habilidades</h2>
-        <ul>
-            <li><img src="imagens/c_sharp.png" alt="Logo C#" class="icon">C# .NET</li>
-            <li><img src="imagens/java.png" alt="Logo Java" class="icon">Java</li>
-            <li><img src="imagens/php.png" alt="Logo Php" class="icon">Php</li>
-            <li><img src="imagens/sql server.png" alt="Logo SQL Server" class="icon">Banco de dados SQL Server</li>
-            <li><img src="imagens/selenium.png" alt="Logo Selenium" class="icon">Automações com Selenium</li>
-            <li><img src="imagens/html.png" alt="Logo HTML5" class="icon">HTML5</li>
-            <li><img src="imagens/css.png" alt="Logo CSS3" class="icon">CSS3</li>
-            <li><img src="imagens/js.png" alt="Logo JavaScript" class="icon">JavaScript (Aprendendo)</li>
-        </ul>
-    </section>
+        <section id="experience" class="content-section">
+            <h2>Experiência</h2>
+            <ul>
+                <li><strong>Programador Júnior</strong> – Concilig (2024 - Presente)</li>
+                <li><strong>Estagiário</strong> – Concilig (2023 - 2024)</li>
+                <li><strong>Estagiário</strong> – SORRI-Bauru (2018 - 2019)</li>
+            </ul>
+        </section>
 
-    <section id="experience" class="fade-in">
-        <h2>Experiência</h2>
-        <ul>
-            <li>(03/2024 - Presente) | Programador Jr. -Concilig telemarketing e cobranca ltda - C# .NET</li>
-            <li>(09/2023 - 03/2024) | Estagiário - Concilig telemarketing e cobranca ltda - C# .NET</li>
-            <li>(10/2018 - 03/2019) | Estagiário - SORRI-BAURU - C# .NET</li>
-        </ul>
-    </section>
+        <!-- <section id="projects" class="content-section">
+            <h2>Projetos</h2>
+            <ul>
+                <li><a href="https://github.com/shoda/projeto1" target="_blank">Sistema de Automação de Testes com Selenium</a></li>
+                <li><a href="https://github.com/shoda/projeto2" target="_blank">Aplicativo de Gestão de Tarefas em C#</a></li>
+            </ul>
+        </section> -->
 
-    <section id="contact" class="fade-in">
-        <h2>Contato</h2>
-        <p>Email: matheus.shoda21@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sh0da/" target="_blank">https://www.linkedin.com/in/sh0da/</a></p>
-        <p>WhatsApp: <a href="https://wa.me/5514996254681?text=Ol%C3%A1%2C%20Matheus.%20Tudo%20bem%3F%20%F0%9F%98%8A">Enviar um "olá"</a></p>
-        <a href="curriculo-matheus.pdf" download="Curriculo_Matheus_Shoda_Lima" class="download-btn">Baixar Currículo</a>
-    </section>
+        <section id="contact" class="content-section">
+            <h2>Contato</h2>
+            <div class="contact-links">
+                <a href="mailto:matheus.shoda21@gmail.com" class="contact-item">
+                    <img src="imagens/email-icon.png" alt="Ícone de Email"> matheus.shoda21@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/sh0da/" target="_blank" class="contact-item">
+                    <img src="imagens/linkedin-icon.png" alt="Ícone do LinkedIn"> LinkedIn
+                </a>
+                <a href="https://github.com/Shoda7" target="_blank" class="contact-item">
+                    <img src="imagens/github-icon.png" alt="Ícone do GitHub"> GitHub
+                </a>
+                <a href="curriculo-matheus.pdf" class="download-cv" download>
+                     Baixar Currículo
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Matheus Shoda Lima</p>
+        <p>&copy; 2025 Matheus Shoda Lima | Desenvolvedor de Software</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
