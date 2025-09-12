@@ -9,18 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <div class="header-container">
-            <div class="profile">
-                <img src="perfil.jpg" alt="Foto de Perfil" class="profile-img">
-                <div class="profile-info">
-                    <h1>Matheus Shoda Lima</h1>
-                    <p>Desenvolvedor Fullstack</p>
-                </div>
-            </div>  
+        <div class="hero-container">
+            <img src="perfil.jpg" alt="Foto de Perfil" class="profile-img">
+            <h1>Matheus Shoda Lima</h1>
+            <p>Eu sou <span id="typed-text"></span></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sh0da/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Shoda7" target="_blank">GitHub</a>
+            </div>
         </div>
     </header>
-
 
     <nav>
         <ul>
@@ -28,7 +28,7 @@
             <li><a href="#formacao">Formação</a></li>
             <li><a href="#skills">Habilidades</a></li>
             <li><a href="#experience">Experiência</a></li>
-            <!-- <li><a href="#projects">Projetos</a></li> -->
+            <li><a href="#projects">Projetos</a></li>
             <li><a href="#contact">Contato</a></li>
         </ul>
     </nav>
@@ -68,13 +68,37 @@
             </ul>
         </section>
 
-        <!-- <section id="projects" class="content-section">
-            <h2>Projetos</h2>
-            <ul>
-                <li><a href="https://github.com/shoda/projeto1" target="_blank">Sistema de Automação de Testes com Selenium</a></li>
-                <li><a href="https://github.com/shoda/projeto2" target="_blank">Aplicativo de Gestão de Tarefas em C#</a></li>
-            </ul>
-        </section> -->
+        <section id="projects" class="content-section">
+            <h2>Meus Projetos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="imagens/projeto1.jpg" alt="Imagem do Projeto de Automação">
+                    <h3>Sistema de Automação</h3>
+                    <p>Testes automatizados com Selenium para otimizar processos de QA em aplicações web.</p>
+                    <div class="tech-tags">
+                        <span>C#</span>
+                        <span>Selenium</span>
+                        <span>.NET</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Shoda7" target="_blank">GitHub</a>
+                        </div>
+                </div>
+                <div class="project-card">
+                    <img src="imagens/projeto2.jpg" alt="Imagem do App de Gestão de Tarefas">
+                    <h3>App de Gestão de Tarefas</h3>
+                    <p>Aplicação desktop em C# para organização pessoal e de equipes, com integração a banco de dados.</p>
+                    <div class="tech-tags">
+                        <span>C#</span>
+                        <span>SQL Server</span>
+                        <span>WinForms</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Shoda7" target="_blank">GitHub</a>
+                        </div>
+                </div>
+                </div>
+        </section>
 
         <section id="contact" class="content-section">
             <h2>Contato</h2>
@@ -98,5 +122,8 @@
     <footer>
         <p>&copy; 2025 Matheus Shoda Lima | Desenvolvedor de Software</p>
     </footer>
-</body>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script> </body>
 </html>
