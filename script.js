@@ -1,45 +1,70 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // ===================================================================
-    // EFEITO DE DIGITAÇÃO NA SEÇÃO HERO (TYPED.JS)
-    // ===================================================================
-    const typedOptions = {
-        strings: ['Desenvolvedor Fullstack', 'Apaixonado por C#', 'Entusiasta de Tecnologia'],
-        typeSpeed: 50,      // Velocidade de digitação em milissegundos
-        backSpeed: 25,      // Velocidade para apagar o texto
-        backDelay: 2000,    // Tempo de espera antes de começar a apagar
-        loop: true,         // Repetir a animação
+    // Animação de digitação no hero
+    new Typed('#typed-text', {
+        strings: ['Desenvolvedor .NET', 'Tuning de SQL Server', 'Entusiasta de Tecnologia'],
+        typeSpeed: 50,
+        backSpeed: 25,
+        backDelay: 2000,
+        loop: true,
         showCursor: true,
         cursorChar: '|',
-    };
-
-    // Inicializa a animação no elemento que tem o ID 'typed-text'
-    const typed = new Typed('#typed-text', typedOptions);
-
-
-    // ===================================================================
-    // ANIMAÇÃO DE ELEMENTOS AO ROLAR A PÁGINA (SCROLLREVEAL.JS)
-    // ===================================================================
-    const sr = ScrollReveal({
-        distance: '60px',       // Distância que o elemento se move na animação
-        duration: 2000,       // Duração da animação em milissegundos
-        easing: 'cubic-bezier(0.5, 0, 0, 1)', // Curva de animação para um efeito suave
-        reset: false          // A animação acontece apenas uma vez
     });
 
-    // Aplica a animação para as seções de conteúdo de forma geral
-    // A origem 'bottom' faz o elemento surgir de baixo para cima
-    sr.reveal('.content-section', { origin: 'bottom' });
+    // Animações ao rolar a página
+    const sr = ScrollReveal({
+        distance: '40px',
+        duration: 700,
+        easing: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
+        reset: false,
+    });
 
-    // Aplica um efeito escalonado para itens de lista e projetos
-    // 'interval' cria um pequeno atraso entre a animação de cada elemento
-    sr.reveal('.skills-list li', { origin: 'left', interval: 100 });
-    sr.reveal('.project-card', { origin: 'bottom', interval: 200 });
+    sr.reveal('.section-title',   { origin: 'top',    delay: 100 });
+    sr.reveal('.about-content',   { origin: 'bottom', delay: 200 });
+    sr.reveal('.stat-item',       { origin: 'bottom', interval: 100 });
+    sr.reveal('.skill-card',      { origin: 'bottom', interval: 70 });
+    sr.reveal('.timeline-col',    { origin: 'bottom', interval: 150 });
+    sr.reveal('.project-card',    { origin: 'bottom', interval: 150 });
+    sr.reveal('.contact-card',    { origin: 'bottom', interval: 100 });
+    sr.reveal('.contact-subtitle', { origin: 'bottom', delay: 150 });
+    sr.reveal('.btn-large',       { origin: 'bottom', delay: 300 });
 
-    // Anima os itens de contato individualmente
-    sr.reveal('.contact-item', { origin: 'left', interval: 150 });
+    // Link ativo na nav conforme a seção visível
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    // Anima o botão de download com um pequeno atraso
-    sr.reveal('.download-cv', { origin: 'bottom', delay: 400 });
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+                if (active) active.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-50% 0px -50% 0px', threshold: 0 });
 
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // Menu hamburguer (mobile)
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
+
+    // Botão voltar ao topo
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });

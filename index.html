@@ -3,127 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Matheus Shoda Lima</title>
+    <meta name="description" content="Portfólio de Matheus Shoda Lima — Desenvolvedor .NET e C#, especializado em backend, automação e integração de sistemas.">
+    <title>Matheus Shoda Lima | Desenvolvedor .NET</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="imagex/png" href="imagens/dev.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="imagens/dev.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <div class="hero-container">
-            <img src="perfil.jpg" alt="Foto de Perfil" class="profile-img">
-            <h1>Matheus Shoda Lima</h1>
-            <p>Eu sou <span id="typed-text"></span></p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/sh0da/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Shoda7" target="_blank">GitHub</a>
-            </div>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Shoda</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#experience" class="nav-link">Trajetória</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
         </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#formacao">Formação</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#experience">Experiência</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
     </nav>
 
+    <header id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-container">
+            <img src="perfil.jpg" alt="Foto de Perfil de Matheus Shoda Lima" class="profile-img">
+            <p class="hero-tag">Olá, eu sou</p>
+            <h1>Matheus Shoda Lima</h1>
+            <p class="hero-subtitle"><span id="typed-text"></span></p>
+            <div class="hero-buttons">
+                <a href="curriculo-matheus-v2.pdf" class="btn btn-primary" download>
+                    <i class="fas fa-download"></i> Baixar CV
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i> Contato
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/sh0da/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Shoda7" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Rolar para baixo">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
     <main>
-        <section id="about" class="content-section">
-            <h2>Sobre Mim</h2>
-            <p>Sou Matheus Shoda Lima, desenvolvedor com experiência em C#, .NET e SQL Server. Minha trajetória inclui projetos acadêmicos e profissionais focados em desenvolvimento backend, automação de processos e integração de sistemas. Atualmente, curso Bacharelado em Sistemas de Informação na UNESP e atuo como Programador Júnior na Concilig.</p>
-        </section>
-
-        <section id="formacao" class="content-section">
-            <h2>Formação</h2>
-            <ul>
-                <li><strong>Técnico em Informática</strong> – CTI UNESP (2016 - 2018)</li>
-                <li><strong>Bacharelado em Sistemas de Informação</strong> – UNESP Bauru (2023 - Atualmente)</li>
-            </ul>
-        </section>
-
-        <section id="skills" class="content-section">
-            <h2>Habilidades Técnicas</h2>
-            <ul class="skills-list">
-                <li>C# .NET</li>
-                <li>JavaScript</li>
-                <li>SQL Server</li>
-                <li>PHP</li>
-                <li>HTML5 e CSS3</li>
-                <li>Automação com Selenium</li>
-            </ul>
-        </section>
-
-        <section id="experience" class="content-section">
-            <h2>Experiência</h2>
-            <ul>
-                <li><strong>Programador Júnior</strong> – Concilig (2024 - Presente)</li>
-                <li><strong>Estagiário</strong> – Concilig (2023 - 2024)</li>
-                <li><strong>Estagiário</strong> – SORRI-Bauru (2018 - 2019)</li>
-            </ul>
-        </section>
-
-        <section id="projects" class="content-section">
-            <h2>Meus Projetos</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="imagens/projeto1.jpg" alt="Imagem do Projeto de Automação">
-                    <h3>Sistema de Automação</h3>
-                    <p>Testes automatizados com Selenium para otimizar processos de QA em aplicações web.</p>
-                    <div class="tech-tags">
-                        <span>C#</span>
-                        <span>Selenium</span>
-                        <span>.NET</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Shoda7" target="_blank">GitHub</a>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Sobre <span class="accent">Mim</span></h2>
+                <div class="about-content">
+                    <p>Sou Matheus Shoda Lima, desenvolvedor com foco em <strong>C#, .NET e SQL Server</strong>. Minha trajetória inclui projetos acadêmicos e profissionais voltados ao desenvolvimento backend, automação de processos e integração de sistemas.</p>
+                    <p>Atualmente curso <strong>Bacharelado em Sistemas de Informação</strong> na UNESP e atuo como <strong>Programador Júnior</strong> na Concilig, desenvolvendo e mantendo soluções corporativas.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Anos de experiência</span>
                         </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projetos entregues</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Empresas</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <img src="imagens/projeto2.jpg" alt="Imagem do App de Gestão de Tarefas">
-                    <h3>App de Gestão de Tarefas</h3>
-                    <p>Aplicação desktop em C# para organização pessoal e de equipes, com integração a banco de dados.</p>
-                    <div class="tech-tags">
-                        <span>C#</span>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Habilidades <span class="accent">Técnicas</span></h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <img src="imagens/c_sharp.png" alt="C#">
+                        <span>C# .NET</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="imagens/js.png" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="imagens/sql server.png" alt="SQL Server">
                         <span>SQL Server</span>
-                        <span>WinForms</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Shoda7" target="_blank">GitHub</a>
-                        </div>
+                    <div class="skill-card">
+                        <img src="imagens/php.png" alt="PHP">
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="imagens/html.png" alt="HTML5">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="imagens/css.png" alt="CSS3">
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="imagens/selenium.png" alt="Selenium">
+                        <span>Selenium</span>
+                    </div>
                 </div>
-                </div>
+            </div>
         </section>
 
-        <section id="contact" class="content-section">
-            <h2>Contato</h2>
-            <div class="contact-links">
-                <a href="mailto:matheus.shoda21@gmail.com" class="contact-item">
-                    <img src="imagens/email-icon.png" alt="Ícone de Email"> matheus.shoda21@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/sh0da/" target="_blank" class="contact-item">
-                    <img src="imagens/linkedin-icon.png" alt="Ícone do LinkedIn"> LinkedIn
-                </a>
-                <a href="https://github.com/Shoda7" target="_blank" class="contact-item">
-                    <img src="imagens/github-icon.png" alt="Ícone do GitHub"> GitHub
-                </a>
-                <a href="curriculo-matheus-v2.pdf" class="download-cv" download>
-                     Baixar Currículo
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Minha <span class="accent">Trajetória</span></h2>
+                <div class="timeline-wrapper">
+                    <div class="timeline-col">
+                        <h3 class="timeline-col-title">
+                            <i class="fas fa-briefcase"></i> Experiência
+                        </h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-body">
+                                    <span class="timeline-date">2024 – Presente</span>
+                                    <h4>Programador Júnior</h4>
+                                    <p class="timeline-company">Concilig</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-body">
+                                    <span class="timeline-date">2023 – 2024</span>
+                                    <h4>Estagiário</h4>
+                                    <p class="timeline-company">Concilig</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-body">
+                                    <span class="timeline-date">2018 – 2019</span>
+                                    <h4>Estagiário</h4>
+                                    <p class="timeline-company">SORRI-Bauru</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-col">
+                        <h3 class="timeline-col-title">
+                            <i class="fas fa-graduation-cap"></i> Formação
+                        </h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-body">
+                                    <span class="timeline-date">2023 – Presente</span>
+                                    <h4>Bacharelado em Sistemas de Informação</h4>
+                                    <p class="timeline-company">UNESP Bauru</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-body">
+                                    <span class="timeline-date">2016 – 2018</span>
+                                    <h4>Técnico em Informática</h4>
+                                    <p class="timeline-company">CTI UNESP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Meus <span class="accent">Projetos</span></h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="card-header card-header--blue">
+                            <i class="fas fa-robot card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3>Sistema de Automação</h3>
+                            <p>Testes automatizados com Selenium para otimizar processos de QA em aplicações web.</p>
+                            <div class="tech-tags">
+                                <span>C#</span>
+                                <span>Selenium</span>
+                                <span>.NET</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Shoda7" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-header card-header--purple">
+                            <i class="fas fa-clipboard-list card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3>App de Gestão de Tarefas</h3>
+                            <p>Aplicação desktop em C# para organização pessoal e de equipes, com integração a banco de dados.</p>
+                            <div class="tech-tags">
+                                <span>C#</span>
+                                <span>SQL Server</span>
+                                <span>WinForms</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Shoda7" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container contact-container">
+                <h2 class="section-title">Entre em <span class="accent">Contato</span></h2>
+                <p class="contact-subtitle">Estou disponível para oportunidades e colaborações. Fique à vontade para entrar em contato!</p>
+                <div class="contact-grid">
+                    <a href="mailto:matheus.shoda21@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <span>matheus.shoda21@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sh0da/" target="_blank" class="contact-card">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Shoda7" target="_blank" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <a href="curriculo-matheus-v2.pdf" class="btn btn-primary btn-large" download>
+                    <i class="fas fa-file-pdf"></i> Baixar Currículo
                 </a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Matheus Shoda Lima | Desenvolvedor de Software</p>
+        <div class="container">
+            <p>Desenvolvido por <span class="accent">Matheus Shoda Lima</span> &copy; 2025</p>
+        </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="script.js"></script> </body>
+    <script src="script.js"></script>
+</body>
 </html>
