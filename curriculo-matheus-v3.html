@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Currículo – Matheus Shoda Lima</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 9.8px;
+      color: #1a1a1a;
+      background: #e8e8e8;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: #fff;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 62mm 1fr;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      background: #f7f9fb;
+      border-right: 1px solid #e2e8f0;
+      padding: 20px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .name-block { border-bottom: 2px solid #2563eb; padding-bottom: 10px; }
+    .name-block h1 { font-size: 18px; font-weight: 800; color: #0f172a; line-height: 1.15; }
+    .name-block .role { font-size: 8.5px; color: #2563eb; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+
+    .sb-section h3 {
+      font-size: 7.8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #2563eb;
+      border-bottom: 1px solid #dde6f0;
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+    }
+
+    .contact-item { display: flex; align-items: flex-start; gap: 5px; margin-bottom: 4px; font-size: 9px; color: #334155; }
+    .contact-item .ico { color: #2563eb; width: 11px; flex-shrink: 0; font-size: 10px; }
+    .contact-item a { color: #334155; text-decoration: none; }
+
+    .about-text { font-size: 9px; color: #475569; line-height: 1.55; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 3px; }
+    .tag {
+      background: #e0eaff;
+      color: #1e40af;
+      font-size: 8.2px;
+      font-weight: 500;
+      padding: 2px 7px;
+      border-radius: 20px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .lang-item { font-size: 9px; color: #334155; line-height: 1.7; }
+
+    /* ── MAIN ── */
+    .main {
+      padding: 20px 18px 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .sec-title {
+      font-size: 8.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #0f172a;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 3px;
+      margin-bottom: 9px;
+    }
+
+    .exp-item { margin-bottom: 8px; }
+
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .exp-role { font-size: 10px; font-weight: 700; color: #0f172a; }
+    .exp-date { font-size: 8.2px; color: #64748b; white-space: nowrap; }
+    .exp-company { font-size: 8.8px; color: #475569; margin: 1px 0 4px; }
+
+    .exp-desc {
+      font-size: 8.8px;
+      color: #374151;
+      line-height: 1.55;
+      padding-left: 9px;
+      border-left: 2px solid #bfdbfe;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .edu-item { margin-bottom: 7px; }
+    .edu-course { font-size: 9.5px; font-weight: 700; color: #0f172a; }
+    .edu-school { font-size: 8.8px; color: #475569; }
+    .edu-date { font-size: 8.2px; color: #64748b; }
+
+    .cert-item { margin-bottom: 6px; }
+    .cert-name { font-size: 9px; font-weight: 700; color: #0f172a; }
+    .cert-desc { font-size: 8.5px; color: #475569; }
+
+    @media print {
+      html, body { width: 210mm; height: 297mm; background: #fff; }
+      .page { margin: 0; width: 210mm; height: 297mm; }
+      .sidebar { background: #f7f9fb !important; }
+      .tag { background: #e0eaff !important; color: #1e40af !important; }
+      .exp-desc { border-left: 2px solid #bfdbfe !important; }
+    }
+
+    @page { size: A4 portrait; margin: 0; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="name-block">
+      <h1>Matheus<br>Shoda Lima</h1>
+      <div class="role">Tech Lead · CRM</div>
+    </div>
+
+    <div class="sb-section">
+      <h3>Contato</h3>
+      <div class="contact-item"><span class="ico">✉</span><a href="mailto:matheus.shoda21@gmail.com">matheus.shoda21@gmail.com</a></div>
+      <div class="contact-item"><span class="ico">☎</span><span>(14) 99625-4681</span></div>
+      <div class="contact-item"><span class="ico">🌐</span><a href="https://www.shoda.com.br">www.shoda.com.br</a></div>
+      <div class="contact-item"><span class="ico">in</span><a href="https://linkedin.com/in/sh0da">linkedin.com/in/sh0da</a></div>
+      <div class="contact-item"><span class="ico">📍</span><span>Bauru – SP</span></div>
+    </div>
+
+    <div class="sb-section">
+      <h3>Sobre</h3>
+      <p class="about-text">25 anos · Solteiro<br><br>
+      Tech Lead com foco em SQL Server e C# .NET, liderando o setor de CRM após 2 anos de crescimento na empresa.</p>
+    </div>
+
+    <div class="sb-section">
+      <h3>Banco de Dados</h3>
+      <div class="tags">
+        <span class="tag">SQL Server</span>
+        <span class="tag">T-SQL</span>
+        <span class="tag">Stored Procedures</span>
+        <span class="tag">Query Tuning</span>
+        <span class="tag">SQL Server Agent</span>
+        <span class="tag">SSMS</span>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <h3>Desenvolvimento</h3>
+      <div class="tags">
+        <span class="tag">C# .NET</span>
+        <span class="tag">ASP.NET</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Git</span>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <h3>Liderança</h3>
+      <div class="tags">
+        <span class="tag">Liderança Técnica</span>
+        <span class="tag">Gestão de Demandas</span>
+        <span class="tag">Mentoria</span>
+        <span class="tag">Code Review</span>
+        <span class="tag">Arquitetura de Software</span>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <h3>Idiomas</h3>
+      <p class="lang-item">Português — Nativo</p>
+      <p class="lang-item">Inglês — Intermediário (leitura técnica)</p>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <section>
+      <div class="sec-title">Experiência Profissional</div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Tech Lead</span>
+          <span class="exp-date">Abr/2026 – Atual</span>
+        </div>
+        <div class="exp-company">Concilig Telemarketing e Cobrança LTDA · Híbrido</div>
+        <div class="exp-desc">Promovido à liderança técnica do setor de CRM após 2 anos de empresa. Defino padrões, arquitetura e direcionamento técnico do time. Gerencio e priorizo demandas, distribuo entregas entre devs e estagiários e removo impedimentos. Referência em SQL Server e C# .NET, conduzindo decisões de stored procedures, tuning e automação de Jobs críticos.</div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Desenvolvedor Pleno</span>
+          <span class="exp-date">Jun/2025 – Mar/2026</span>
+        </div>
+        <div class="exp-company">Concilig Telemarketing e Cobrança LTDA · Presencial</div>
+        <div class="exp-desc">Liderança de arquitetura de stored procedures complexas e análise proativa de performance. Tradução de regras de negócio críticas para o banco de dados, garantindo consistência e integridade. Mentoria técnica de júniores e estagiários em SQL e C#. Investigação de bugs e incidentes em sistemas CRM.</div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Desenvolvedor Júnior</span>
+          <span class="exp-date">Mar/2024 – Mai/2025</span>
+        </div>
+        <div class="exp-company">Concilig Telemarketing e Cobrança LTDA · Presencial</div>
+        <div class="exp-desc">Desenvolvimento e manutenção de procedures para automação e ETL. Integração de APIs RESTful em C# .NET entre sistemas legados e novos. Otimização de Jobs e apoio no onboarding técnico de estagiários.</div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Estagiário em Desenvolvimento · C# .NET</span>
+          <span class="exp-date">Set/2023 – Fev/2024</span>
+        </div>
+        <div class="exp-company">Concilig Telemarketing e Cobrança LTDA · Presencial</div>
+        <div class="exp-desc">Desenvolvimento de consultas SQL Server, manutenção de aplicações .NET e correção de bugs.</div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Estagiário em Desenvolvimento · C# .NET</span>
+          <span class="exp-date">Nov/2018 – Abr/2019</span>
+        </div>
+        <div class="exp-company">SORRI-Bauru · Presencial</div>
+        <div class="exp-desc">Apoio no desenvolvimento de consultas SQL e manutenção de aplicações .NET. Melhoria de interfaces de usuário.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title">Formação Acadêmica</div>
+      <div class="edu-item">
+        <div class="edu-course">Bacharelado em Sistemas de Informação</div>
+        <div class="edu-school">UNESP Bauru</div>
+        <div class="edu-date">Jan/2023 – Cursando</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-course">Técnico em Informática</div>
+        <div class="edu-school">UNESP – CTI "Prof. Isaac Portal Roldán"</div>
+        <div class="edu-date">2016 – 2018</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title">Cursos &amp; Certificações</div>
+      <div class="cert-item">
+        <div class="cert-name">.NET Developer Fundamentals – balta.io (2024)</div>
+        <div class="cert-desc">Boas práticas, arquitetura de software e desenvolvimento .NET</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Iniciação Científica Júnior – CNPq / UNESP / OBMEP (2013)</div>
+        <div class="cert-desc">Lógica matemática pura e aplicada</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
