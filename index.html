@@ -8,14 +8,25 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" type="image/png" href="imagens/dev.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Background animado -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">Shoda</a>
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-dot"></span>
+                Shoda
+            </a>
             <button class="hamburger" id="hamburger" aria-label="Abrir menu">
                 <span></span><span></span><span></span>
             </button>
@@ -24,24 +35,29 @@
                 <li><a href="#skills" class="nav-link">Habilidades</a></li>
                 <li><a href="#experience" class="nav-link">Trajetória</a></li>
                 <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#download-cv" class="nav-link">Currículo</a></li>
                 <li><a href="#contact" class="nav-link">Contato</a></li>
             </ul>
         </div>
     </nav>
 
     <header id="home">
-        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
         <div class="hero-container">
-            <img src="perfil-2.jpg" alt="Foto de Perfil de Matheus Shoda Lima" class="profile-img">
-            <p class="hero-tag">Olá, eu sou</p>
+            <div class="profile-wrapper">
+                <div class="profile-ring"></div>
+                <img src="perfil-2.jpg" alt="Foto de Perfil de Matheus Shoda Lima" class="profile-img">
+            </div>
+            <span class="hero-tag">Disponível para conversas</span>
             <h1>Matheus Shoda Lima</h1>
             <p class="hero-subtitle"><span id="typed-text"></span></p>
+            <p class="hero-description">Tech Lead na Concilig liderando o setor de CRM com foco em SQL Server, C# .NET e arquitetura de soluções escaláveis.</p>
             <div class="hero-buttons">
-                <a href="curriculo-matheus-v3.pdf" class="btn btn-primary" download>
-                    <i class="fas fa-download"></i> Baixar CV
+                <a href="#download-cv" class="btn btn-primary">
+                    <i class="fas fa-download"></i> Baixar Currículo
                 </a>
                 <a href="#contact" class="btn btn-outline">
-                    <i class="fas fa-envelope"></i> Contato
+                    <i class="fas fa-envelope"></i> Vamos conversar
                 </a>
             </div>
             <div class="hero-socials">
@@ -51,9 +67,13 @@
                 <a href="https://github.com/Shoda7" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
+                <a href="mailto:matheus.shoda21@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
         <a href="#about" class="scroll-down" aria-label="Rolar para baixo">
+            <span>Scroll</span>
             <i class="fas fa-chevron-down"></i>
         </a>
     </header>
@@ -61,10 +81,11 @@
     <main>
         <section id="about" class="section">
             <div class="container">
+                <span class="section-eyebrow">Quem sou</span>
                 <h2 class="section-title">Sobre <span class="accent">Mim</span></h2>
                 <div class="about-content">
-                    <p>Sou Matheus Shoda Lima, <strong>Tech Lead</strong> com foco em <strong>SQL Server e C# .NET</strong>, liderando o setor de CRM da Concilig após uma trajetória de crescimento interno de estagiário a líder técnico em menos de 3 anos.</p>
-                    <p>Responsável pela arquitetura, padrões técnicos e mentoria do time. Atuo também na otimização de performance de banco de dados e automação de processos críticos. Curso <strong>Bacharelado em Sistemas de Informação</strong> na UNESP Bauru.</p>
+                    <p>Sou <strong>Matheus Shoda Lima</strong>, Tech Lead com foco em <strong>SQL Server e C# .NET</strong>, liderando o setor de CRM da Concilig após uma trajetória de crescimento interno de estagiário a líder técnico em menos de 3 anos.</p>
+                    <p>Responsável pela <strong>arquitetura, padrões técnicos e mentoria do time</strong>. Atuo também na otimização de performance de banco de dados e automação de processos críticos. Curso <strong>Bacharelado em Sistemas de Informação</strong> na UNESP Bauru.</p>
                     <div class="stats">
                         <div class="stat-item">
                             <span class="stat-number">3+</span>
@@ -85,35 +106,56 @@
 
         <section id="skills" class="section section-alt">
             <div class="container">
+                <span class="section-eyebrow">Stack técnica</span>
                 <h2 class="section-title">Habilidades <span class="accent">Técnicas</span></h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <img src="imagens/c_sharp.png" alt="C#">
-                        <span>C# .NET</span>
+                <p class="skills-intro">Tecnologias que uso no dia a dia para construir, otimizar e escalar sistemas. Passe o cursor para pausar.</p>
+
+                <!-- CARROSSEL 1 -->
+                <div class="marquee">
+                    <div class="marquee-track" data-duration="38" style="--marquee-duration: 38s">
+                        <!-- conjunto duplicado para loop infinito -->
+                        <div class="skill-chip"><img src="imagens/c_sharp.png" alt="C#"><div class="skill-meta"><span class="skill-name">C# .NET</span><span class="skill-cat">Backend</span></div></div>
+                        <div class="skill-chip"><img src="imagens/sql-server.png" alt="SQL Server"><div class="skill-meta"><span class="skill-name">SQL Server</span><span class="skill-cat">Database</span></div></div>
+                        <div class="skill-chip"><img src="imagens/js.png" alt="JavaScript"><div class="skill-meta"><span class="skill-name">JavaScript</span><span class="skill-cat">Frontend</span></div></div>
+                        <div class="skill-chip"><img src="imagens/php.png" alt="PHP"><div class="skill-meta"><span class="skill-name">PHP</span><span class="skill-cat">Backend</span></div></div>
+                        <div class="skill-chip"><img src="imagens/html.png" alt="HTML5"><div class="skill-meta"><span class="skill-name">HTML5</span><span class="skill-cat">Markup</span></div></div>
+                        <div class="skill-chip"><img src="imagens/css.png" alt="CSS3"><div class="skill-meta"><span class="skill-name">CSS3</span><span class="skill-cat">Style</span></div></div>
+                        <div class="skill-chip"><img src="imagens/selenium.png" alt="Selenium"><div class="skill-meta"><span class="skill-name">Selenium</span><span class="skill-cat">Automação</span></div></div>
+                        <div class="skill-chip"><img src="imagens/java.png" alt="Java"><div class="skill-meta"><span class="skill-name">Java</span><span class="skill-cat">Backend</span></div></div>
+
+                        <!-- duplicata exata -->
+                        <div class="skill-chip" aria-hidden="true"><img src="imagens/c_sharp.png" alt=""><div class="skill-meta"><span class="skill-name">C# .NET</span><span class="skill-cat">Backend</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><img src="imagens/sql-server.png" alt=""><div class="skill-meta"><span class="skill-name">SQL Server</span><span class="skill-cat">Database</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><img src="imagens/js.png" alt=""><div class="skill-meta"><span class="skill-name">JavaScript</span><span class="skill-cat">Frontend</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><img src="imagens/php.png" alt=""><div class="skill-meta"><span class="skill-name">PHP</span><span class="skill-cat">Backend</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><img src="imagens/html.png" alt=""><div class="skill-meta"><span class="skill-name">HTML5</span><span class="skill-cat">Markup</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><img src="imagens/css.png" alt=""><div class="skill-meta"><span class="skill-name">CSS3</span><span class="skill-cat">Style</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><img src="imagens/selenium.png" alt=""><div class="skill-meta"><span class="skill-name">Selenium</span><span class="skill-cat">Automação</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><img src="imagens/java.png" alt=""><div class="skill-meta"><span class="skill-name">Java</span><span class="skill-cat">Backend</span></div></div>
                     </div>
-                    <div class="skill-card">
-                        <img src="imagens/js.png" alt="JavaScript">
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src="imagens/sql server.png" alt="SQL Server">
-                        <span>SQL Server</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src="imagens/php.png" alt="PHP">
-                        <span>PHP</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src="imagens/html.png" alt="HTML5">
-                        <span>HTML5</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src="imagens/css.png" alt="CSS3">
-                        <span>CSS3</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src="imagens/selenium.png" alt="Selenium">
-                        <span>Selenium</span>
+                </div>
+
+                <!-- CARROSSEL 2 — sentido oposto, com palavras-chave -->
+                <div class="marquee reverse">
+                    <div class="marquee-track" data-duration="48" style="--marquee-duration: 48s">
+                        <div class="skill-chip"><div class="skill-meta"><span class="skill-name">Tuning de Performance</span><span class="skill-cat">SQL Server</span></div></div>
+                        <div class="skill-chip"><div class="skill-meta"><span class="skill-name">Stored Procedures</span><span class="skill-cat">T-SQL</span></div></div>
+                        <div class="skill-chip"><div class="skill-meta"><span class="skill-name">Liderança Técnica</span><span class="skill-cat">Soft Skill</span></div></div>
+                        <div class="skill-chip"><div class="skill-meta"><span class="skill-name">Arquitetura de Software</span><span class="skill-cat">Design</span></div></div>
+                        <div class="skill-chip"><div class="skill-meta"><span class="skill-name">Mentoria de Devs</span><span class="skill-cat">Gestão</span></div></div>
+                        <div class="skill-chip"><div class="skill-meta"><span class="skill-name">Automação QA</span><span class="skill-cat">Selenium</span></div></div>
+                        <div class="skill-chip"><div class="skill-meta"><span class="skill-name">CRM</span><span class="skill-cat">Domínio</span></div></div>
+                        <div class="skill-chip"><div class="skill-meta"><span class="skill-name">Code Review</span><span class="skill-cat">Práticas</span></div></div>
+
+                        <!-- duplicata -->
+                        <div class="skill-chip" aria-hidden="true"><div class="skill-meta"><span class="skill-name">Tuning de Performance</span><span class="skill-cat">SQL Server</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><div class="skill-meta"><span class="skill-name">Stored Procedures</span><span class="skill-cat">T-SQL</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><div class="skill-meta"><span class="skill-name">Liderança Técnica</span><span class="skill-cat">Soft Skill</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><div class="skill-meta"><span class="skill-name">Arquitetura de Software</span><span class="skill-cat">Design</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><div class="skill-meta"><span class="skill-name">Mentoria de Devs</span><span class="skill-cat">Gestão</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><div class="skill-meta"><span class="skill-name">Automação QA</span><span class="skill-cat">Selenium</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><div class="skill-meta"><span class="skill-name">CRM</span><span class="skill-cat">Domínio</span></div></div>
+                        <div class="skill-chip" aria-hidden="true"><div class="skill-meta"><span class="skill-name">Code Review</span><span class="skill-cat">Práticas</span></div></div>
                     </div>
                 </div>
             </div>
@@ -121,6 +163,7 @@
 
         <section id="experience" class="section">
             <div class="container">
+                <span class="section-eyebrow">Caminho até aqui</span>
                 <h2 class="section-title">Minha <span class="accent">Trajetória</span></h2>
                 <div class="timeline-wrapper">
                     <div class="timeline-col">
@@ -199,6 +242,7 @@
 
         <section id="projects" class="section section-alt">
             <div class="container">
+                <span class="section-eyebrow">O que construí</span>
                 <h2 class="section-title">Meus <span class="accent">Projetos</span></h2>
                 <div class="projects-grid">
                     <div class="project-card">
@@ -243,8 +287,76 @@
             </div>
         </section>
 
-        <section id="contact" class="section">
+        <!-- SEÇÃO ESPECIAL: DOWNLOAD CV -->
+        <section id="download-cv" class="section">
+            <div class="container">
+                <div class="cv-stage">
+                    <span class="cv-eyebrow">Currículo completo</span>
+                    <h2 class="cv-title">Pronto pra dar uma <span class="accent">olhada de perto</span>?</h2>
+                    <p class="cv-subtitle">Toda minha trajetória, projetos e habilidades em um único PDF — direto do clique.</p>
+
+                    <div class="cv-download-zone">
+                        <div class="cv-glow"></div>
+
+                        <!-- Linguagens orbitando -->
+                        <div class="cv-orbit-lang cv-orbit-lang--inner">
+                            <div class="cv-orbit-track">
+                                <span class="cv-lang" style="--a: 0deg"><img src="imagens/c_sharp.png" alt="C#"></span>
+                                <span class="cv-lang" style="--a: 90deg"><img src="imagens/sql-server.png" alt="SQL Server"></span>
+                                <span class="cv-lang" style="--a: 180deg"><img src="imagens/js.png" alt="JavaScript"></span>
+                                <span class="cv-lang" style="--a: 270deg"><img src="imagens/php.png" alt="PHP"></span>
+                            </div>
+                        </div>
+
+                        <div class="cv-orbit-lang cv-orbit-lang--outer">
+                            <div class="cv-orbit-track">
+                                <span class="cv-lang" style="--a: 45deg"><img src="imagens/html.png" alt="HTML5"></span>
+                                <span class="cv-lang" style="--a: 135deg"><img src="imagens/css.png" alt="CSS3"></span>
+                                <span class="cv-lang" style="--a: 225deg"><img src="imagens/selenium.png" alt="Selenium"></span>
+                                <span class="cv-lang" style="--a: 315deg"><img src="imagens/java.png" alt="Java"></span>
+                            </div>
+                        </div>
+
+                        <svg class="cv-progress-ring" id="cvProgress" viewBox="0 0 200 200">
+                            <circle class="ring-bg"   cx="100" cy="100" r="95"></circle>
+                            <circle class="ring-fill" cx="100" cy="100" r="95"></circle>
+                        </svg>
+
+                        <div class="cv-particles" id="cvParticles"></div>
+
+                        <a href="curriculo-matheus-v3.pdf" class="cv-button" id="cvButton" download>
+                            <i class="fas fa-file-arrow-down cv-button-icon"></i>
+                            <span class="cv-button-text">Baixar CV</span>
+                            <span class="cv-button-meta">PDF · 2026</span>
+                        </a>
+
+                        <div class="cv-feedback" id="cvFeedback">
+                            <i class="fas fa-check-circle"></i>
+                            Download iniciado!
+                        </div>
+                    </div>
+
+                    <div class="cv-meta">
+                        <div class="cv-meta-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Formato PDF</span>
+                        </div>
+                        <div class="cv-meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Atualizado em 2026</span>
+                        </div>
+                        <div class="cv-meta-item">
+                            <i class="fas fa-language"></i>
+                            <span>Português</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
             <div class="container contact-container">
+                <span class="section-eyebrow">Fale comigo</span>
                 <h2 class="section-title">Entre em <span class="accent">Contato</span></h2>
                 <p class="contact-subtitle">Estou disponível para oportunidades e colaborações. Fique à vontade para entrar em contato!</p>
                 <div class="contact-grid">
@@ -261,9 +373,6 @@
                         <span>GitHub</span>
                     </a>
                 </div>
-                <a href="curriculo-matheus-v3.pdf" class="btn btn-primary btn-large" download>
-                    <i class="fas fa-file-pdf"></i> Baixar Currículo
-                </a>
             </div>
         </section>
     </main>
