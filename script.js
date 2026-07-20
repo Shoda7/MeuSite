@@ -99,30 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (skillsSection) skillsObserver.observe(skillsSection);
 
-    /* === Velocidade do carrossel reativa ao scroll === */
-    let lastY = window.scrollY;
-    let scrollVelocity = 0;
-    let velocityTimer;
-
-    window.addEventListener('scroll', () => {
-        scrollVelocity = Math.min(Math.abs(window.scrollY - lastY), 30);
-        lastY = window.scrollY;
-        clearTimeout(velocityTimer);
-
-        tracks.forEach(t => {
-            const baseDur = parseFloat(t.dataset.duration || '40');
-            const newDur = Math.max(8, baseDur - scrollVelocity * 0.8);
-            t.style.animationDuration = newDur + 's';
-        });
-
-        velocityTimer = setTimeout(() => {
-            tracks.forEach(t => {
-                const baseDur = parseFloat(t.dataset.duration || '40');
-                t.style.animationDuration = baseDur + 's';
-            });
-        }, 400);
-    });
-
     /* === DOWNLOAD CV — animação === */
     const cvButton = document.getElementById('cvButton');
     const cvParticles = document.getElementById('cvParticles');

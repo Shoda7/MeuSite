@@ -50,8 +50,8 @@ ul { list-style: none; }
 .orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.35;
+    filter: blur(90px);
+    opacity: 0.16;
     will-change: transform;
 }
 
@@ -73,7 +73,7 @@ ul { list-style: none; }
     width: 320px; height: 320px;
     background: radial-gradient(circle, #38bdf8 0%, transparent 70%);
     top: 40%; left: 30%;
-    opacity: 0.18;
+    opacity: 0.1;
     animation: orb-float-3 30s ease-in-out infinite;
 }
 
@@ -1131,6 +1131,52 @@ header h1 {
 }
 
 .cv-meta-item i { color: var(--accent); font-size: 0.9rem; }
+
+/* === CARD DE DOWNLOAD DO CV (clean) === */
+.cv-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    max-width: 620px;
+    margin: 0 auto 8px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    text-align: left;
+    position: relative;
+    transition: all var(--ease);
+}
+.cv-card:hover {
+    border-color: var(--border-bright);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+.cv-card-icon {
+    width: 54px; height: 54px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+.cv-card-info { flex: 1; min-width: 0; }
+.cv-card-info h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+.cv-card-info p { font-size: 0.9rem; color: var(--text-muted); }
+.cv-card-btn { flex-shrink: 0; }
+
+@media (max-width: 560px) {
+    .cv-card { flex-direction: column; text-align: center; }
+    .cv-card-info { text-align: center; }
+}
 
 /* === CONTATO === */
 .contact-container { text-align: center; }
